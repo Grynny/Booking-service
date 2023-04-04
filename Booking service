@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class ServiceBookingSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        // Display the menu
+        System.out.println("Welcome to the Service Booking System");
+        System.out.println("------------------------------------");
+        System.out.println("1. Book a service");
+        System.out.println("2. View booked services");
+        System.out.println("3. Cancel a booked service");
+        System.out.println("4. Exit");
+
+        do {
+            // Ask the user for their choice
+            System.out.print("\nEnter your choice: ");
+            choice = scanner.nextInt();
+
+            // Process the user's choice
+            switch (choice) {
+                case 1:
+                    bookService();
+                    break;
+                case 2:
+                    viewBookedServices();
+                    break;
+                case 3:
+                    cancelBookedService();
+                    break;
+                case 4:
+                    System.out.println("\nThank you for using the Service Booking System!");
+                    break;
+                default:
+                    System.out.println("\nInvalid choice. Please try again.");
+                    break;
+            }
+        } while (choice != 4);
+    }
+
+    public static void bookService() {
+        // Code to book a service
+        System.out.println("\nService booked successfully!");
+    }
+
+    public static void viewBookedServices() {
+        // Code to view booked services
+        System.out.println("\nNo services booked yet.");
+    }
+
+    public static void cancelBookedService() {
+        // Code to cancel a booked service
+        System.out.println("\nService cancelled successfully!");
+    }
+}
